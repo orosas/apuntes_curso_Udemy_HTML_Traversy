@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform. Video 75</title>
+  <style>
+    body {
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: slateblue;
+      width: 300px;
+      height: 300px;
+
+      /* transform: rotate(22.5deg) */
+      /* transform: skew(-15deg); */
+      /* transform: scale(0.8); */
+
+      /* Nota: Se utiliza transition para ANIMAR con transform */
+
+      /* Es decir transition define la velocidad,
+      duración y los elementos de css de la animación y se usa transform 
+      para la animación  */
+      transition: all 1s ease-in-out;
+    }
+
+    .box:hover {
+
+      /* Nota: Sobreescribe una a la otra */
+      /* transform: rotate(180deg);
+      transform: skew(-15deg);
+      transform: scale(1.8); */
+
+      /* transform: translateY(-100px);
+      transform: translateX(100px); */
+
+      /* Nota: translate con coordenadas x, y */
+      /* transform: translate(100px, 100px); */
+
+      /* Nota: Para mejor performance se usa translate3D */
+      transform: translate3D(100px, 100px, 100px);
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+
+  </div>
+</body>
+
+</html>

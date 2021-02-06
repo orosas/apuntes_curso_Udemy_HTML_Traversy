@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InLine & Block Styling</title>
+
+  <style>
+    * {
+
+    }
+
+    /* Nota: Por default li es un block line element */
+    li {
+      display: inline;
+    }
+
+    li a {
+      padding-right: 20px;
+    }
+
+    /* Nota: margin:auto; no funciona para inline elements */
+    img {
+      display: block;
+      margin: auto;
+    }
+
+    .box {
+      width: 32.8%;
+      display: inline-block;
+      box-sizing: border-box;
+      background: #e4e4e4;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+  </style>
+
+</head>
+<body>
+  <p>Se utiliza display: inline para alinear horizontalmente los links dentro de una lista ul</p>
+  <ul>
+    <li><a href="#">Technology</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">Fashion</a></li>
+  </ul>
+
+  <br><br>
+  <p>Se utiliza display: block junto con margin:auto para alinear horizontalmente las imagenes</p>
+
+<img src="./img/leaf.png" alt="My Image">
+<img src="./img/leaf.png" alt="My Image">
+
+<br><br>
+<p>Se trata de alinear cada .box utilizando display:inline al igual que el primer menu con ul, pero NO FUNCIONA.</p>
+<p>Debido a que no se puede usar width y display:inline</p>
+<p>Solución: Usar display: inline-block</p>
+<br><br>
+<div class="box">
+  <h3>Heading</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Dolorem maxime veniam ut. Blanditiis veniam dolores tempora
+    voluptatibus et aliquam molestias.
+  </p>
+</div>
+<div class="box">
+  <h3>Heading</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Dolorem maxime veniam ut. Blanditiis veniam dolores tempora
+    voluptatibus et aliquam molestias.
+  </p>
+</div>
+<div class="box">
+  <h3>Heading</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Dolorem maxime veniam ut. Blanditiis veniam dolores tempora
+    voluptatibus et aliquam molestias.
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Shadows</title>
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .box {
+      padding: 1rem;
+      margin: 1rem;
+      background: salmon;
+      color: #000;
+      /* Box shadow example */
+
+      /* offset-x | offset-y | color  */
+      box-shadow: 10px 10px purple;
+
+      /* offset-x | offset-y | blur-radius | color  */
+      box-shadow: 6px 6px 20px purple;
+
+      /* negative values
+        En x se moverá a la izq. 
+        En y se moverá hacia arriba
+      */
+      box-shadow: -6px -6px 20px purple;
+
+      /* Nota: RECOMENDADO PARA USAR COMO SOMBRA */
+      /* offset-x | offset-y | blur-radius | spread-radius | color  */
+      box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3);
+
+      /* Nota: Agregará un tipo de borde dentro del componente. Al usar 
+            negativos será parte de abajo y derecha */
+      /* inset | offset-x | offset-y | blur-radius | spread-radius | color  */
+      box-shadow: inset -3px -3px purple;
+
+      /* Multiple Shadows */
+      box-shadow: 3px 3px 10px purple, -3px -3px 10px cyan;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, necessitatibus?</p>
+    </div>
+    <div class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, necessitatibus?</p>
+    </div>
+    <div class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, necessitatibus?</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before & After</title>
+  <style>
+    .is-required::after {
+      content: '*';
+      color: red;
+      padding-left: 3px;
+    }
+
+    .is-required::before {
+      content: 'XX';
+      color: purple;
+      padding-left: 3px;
+      font-size: 2rem;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #333;
+      color: #fff;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+
+      /* Nota: Al aplicar opacity a la imagen de ésta forma, la opacidad también
+          se aplica al texto del div haciendo complicado la lectura. Mejor aplicar en ::before */
+
+      /* background: url('./03_img/danielle-macinnes-logv9s7f67o-unsplash.jpg') no-repeat center/cover;
+      opacity: 0.4; */
+    }
+
+    header::before {
+      content: "";
+      background: url('./03_img/danielle-macinnes-logv9s7f67o-unsplash.jpg') no-repeat center/cover;
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Direct child of header */
+    header>h1 {
+      font-size: 4rem;
+      margin: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h2>Uso de ::after en el CSS</h2>
+  <P>Se inserta un * entre label e input utilizando:</P>
+  <code>
+    .is-required::after {
+    content: '*';
+    color: red;
+    padding-left: 3px;
+    }
+  </code>
+  <P>De la misma forma se inserta XX antes de label utilizando ::before</P>
+
+  <br>
+
+  <label class="is-required" for="name">Name</label>
+  <input type="text" name="name" placeholder="Se inserta un * entre label e input con ::after en css" maxlength="28"
+    size="28">
+  <h2>Otro caso de uso. Image overlay</h2> -->
+
+  <header>
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, necessitatibus?</p>
+  </header>
+  <section>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ipsam, atque, error itaque vel tempora omnis
+      assumenda temporibus non provident perferendis cum sint iure? Officia harum explicabo vel iste nulla.</p>
+  </section>
+
+</body>
+
+</html>

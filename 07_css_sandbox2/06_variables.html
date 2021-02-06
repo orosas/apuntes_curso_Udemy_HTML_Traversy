@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables</title>
+  <style>
+    /* Se define el scope de las variables.
+    Al utilizar root, se puede usar la variable en 
+    cualquier lado. */
+
+    :root {
+      --max-width: 900px;
+      --primary-color: #333;
+      --secondary-color: salmon;
+      --light-color: #ddd;
+
+    }
+
+    /* Nota: Se pueden definir variables dentro del scope donde
+    se van a usar */
+    .box {
+      --box-1-width: 1;
+      --box-2-width: 3;
+    }
+
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.4;
+      background: var(--light-color);
+    }
+
+    header {
+      background: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      border-bottom: 5px var(--secondary-color) solid;
+    }
+
+    .container {
+      display: flex;
+      margin: auto;
+      max-width: var(--max-width);
+    }
+
+    .box {
+      background-color: var(--primary-color);
+      border-bottom: 5px var(--secondary-color) solid;
+      color: #fff;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    .box-1 {
+      flex: var(--box-1-width);
+    }
+
+    .box-2 {
+      flex: var(--box-2-width);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CSS Variables</h1>
+  </header>
+  <div class="container">
+    <div class="box box-1">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Perferendis atque, facilis repellendus eum ratione a.
+      </p>
+    </div>
+    <div class="box box-2">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Perferendis atque, facilis repellendus eum ratione a.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

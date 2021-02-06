@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Basics</title>
+  
+  <!-- Código de ejemplo del video 48. Flexbox basics -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: rgb(34, 10, 34);
+      /* color: #fff; */
+    }
+
+    .flex-container {
+      display: flex;
+      /* Nota: flex-direction indica la opción de tener items en forma de renglón 
+            o columna */
+      /* flex-direction: row; */
+      /* justify-content: space-between; */
+      /* Nota: flex-wrap, muestra los items en el espacio necesario o los envía a una 
+          nueva línea al usar wrap */
+      /* flex-wrap: wrap; */
+    }
+
+    .flex-container h1 {
+      color: rgb(121, 216, 253);
+    }
+
+    .item {
+      background:rgb(172, 146, 172);
+      border: 2px solid rgb(121, 216, 253);
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      /* width: 200px; */
+      /* Nota: Al aplicar flex-grow: 1; todos los items tienen el mismo 
+            tamaño, sin importar el tamaño de la ventana del navegador */
+      /* flex-grow: 1; */
+
+      /* Opciones
+      flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+
+        /* Nota: flex-grow: 1; hará que el elemento "crezca" para llenar el espacio vacio del 
+            contenedor */
+
+        /* Nota: flex-shrink:0 indica que no se debe "encoger" el elemento, 
+            al hacer más pequeña la ventana del navegador */
+
+        /* Nota: flex-basis Para indicar el tamaño del item */
+      flex: 1 0 200px;
+    }
+
+   
+    .item-1 {
+      /* Nota: flex-shrink:0 indica que no se debe "encoger" el elemento, 
+            al hacer más pequeña la ventana del navegador */
+      /* flex-shrink: 0; */
+    }
+
+    .item-2 {
+      /* Nota: flex-grow hará que el elemento "crezca" para llenar el espacio vacio del 
+            contenedor */
+      /* flex-grow: 1;
+      /* Nota: Para indicar el tamaño del item */
+      /* flex-basis: 0; */
+    }
+
+    .item-3 {
+      /* flex-grow: 2; */
+      /* Nota: flex-basis Para indicar el tamaño del item */
+      /* flex-basis: 0; */
+    }
+
+    
+
+  </style>
+
+</head>
+<body>
+  <div class="flex-container">
+    <div class="item item-1">
+      <h3>Item 1</h3>
+    </div>
+    <div class="item item-2">
+      <h3>Item 2</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 3</h3>
+    </div>
+        <!-- <h1>Flexbox Example h1</h1> -->
+  </div>
+</body>
+</html>

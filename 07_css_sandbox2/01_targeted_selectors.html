@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Targeted Selectors. Video 68</title>
+
+  <style>
+    div p {
+      background: #ddd;
+    }
+
+    /* Direct child */
+
+    div>p {
+      background-color: aquamarine;
+    }
+
+    /* Directly after or siblings  */
+    div+p {
+      background-color: cadetblue;
+      color: #fff;
+    }
+
+    /* By atribute */
+    a[target] {
+      background: purple;
+      color: seashell;
+    }
+
+    a[target='_self'] {
+      background: midnightblue;
+      color: #fff;
+    }
+
+    /* Specific attribute values */
+    input[type='text'],
+    input[type='email'] {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 14px;
+      background-color: #f4f4f4;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div>
+    <p>Direct child... Lorem ipsum dolor sit amet.</p>
+
+    <ul>
+      <li>Item 1</li>
+      <li>
+        <p>Item 2</p>
+      </li>
+      <li>Item 3</li>
+    </ul>
+
+    <p>Direct child....... Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <p>Directly after. Fuera de Div Lorem ipsum dolor sit amet.</p>
+
+  <a href="#">Page 1</a><a href="#" target="_self">Page 2</a><a href="http://www.google.com" target="_blank">Google</a>
+
+  <br><br>
+  <form>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="submit" value="Submit">
+
+  </form>
+</body>
+
+</html>

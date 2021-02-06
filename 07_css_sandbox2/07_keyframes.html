@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes.Video 73 Keyframe Animation 1</title>
+  <style>
+    body {
+      background: #333;
+      color: white;
+    }
+
+    ol {
+      padding-bottom: 2rem;
+    }
+
+    ol li {
+      line-height: 1.8rem;
+    }
+
+    .box {
+      background-color: salmon;
+      width: 200px;
+      height: 200px;
+      position: relative;
+
+
+      /* Nota: Se debe crear un @keyframe con el mismo nombre */
+
+      /* animation-name: animate1; */
+
+      /* animation-duration: 5s; */
+
+      /* Nota: Acepta número de iteraciones o infinite */
+      /* animation-iteration-count: 1; */
+
+      /* Nota: con la siguiente propiedad el objecto se queda en el estado
+          "to" del @keyframes */
+      /* animation-fill-mode: forwards; */
+
+      /* Nota: Tiempo ANTES  de iniciar la animación */
+      /* animation-delay: 2s; */
+
+
+      /* Nota: Define comienzo de animación ya sea to from o del to al 
+              from del @keyframe */
+      /* animation-direction: alternate; */
+
+      /* Nota: "aceleración" de la animación para terminar. 
+      Puede ser inicio lento y después "acelerar" al terminar */
+      /* ease-in: comienzo lento final rápido
+      ease-out: Comienzo rápido final lento */
+      /* ease-in-out: Inicio y final lento */
+
+      /* animation-timing-function: ease-in-out; */
+
+
+      /* ANIMATION SHORTCUT */
+      /* Referencia: */
+      /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation */
+
+      /* animation: <animation-name> | <animation-duration> | <animation-timing-function> 
+        | <animation-delay> | <animation-iteration-count> | <animation-direction> 
+        | <animation-fill-mode> | <animation-play-state> | */
+
+      animation: animate1 infinite 5s forwards 1s ease-in-out;
+
+
+    }
+
+    @keyframes animate1 {
+
+      from {
+        /* Nota: En éste caso se puede omitir width ya que está definido en el css */
+        width: 200px;
+        top: 50px;
+        border-radius: 50%;
+      }
+
+      to {
+        width: 450px;
+        background-color: rgb(11, 100, 100);
+        top: 300px;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Video 73 Keyframe Animation 1</h2>
+  <ol>
+    <li>Dentro del elemento que se quiera animar se crean las propiedades:
+      <ul>
+        <li>animation-name: nombre-animacion</li>
+        <li>animation-duration: XXs</li>
+      </ul>
+    </li>
+    <li>
+      Se crea nueva propiedad: @keyframes nombre-animacion {};
+    </li>
+  </ol>
+
+  <div class="box">
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float & Align</title>
+
+<style>
+
+  * {
+    /* Nota: En éste ejemplo se utiliza box-box-sizing para permitir el float de
+          box2 y box3 de manera correcta */
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6rem;
+  }
+
+
+  .container {
+    /* Nota: Si se usa width al hacer más pequeño el navegador aparece el scroll bar.
+          para evitar ese comportamiento se usa max-width */
+    /* width: 960px; */
+    max-width: 960px;
+    margin: 120px auto;
+  }
+
+  .clr {
+    clear: both;
+  }
+
+  .box {
+    background: #f4f4f4;
+    border: 1px solid #333;
+    padding: 1.3rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .box p span {
+    background-color: rgb(137, 95, 158);
+    color: white;
+  }
+
+  .box p {
+    /* Text Align */
+    /* Default: left */
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+  }
+
+  #box-2 {
+    float: left;
+    width: 68%;
+  }
+
+  #box-3 {
+    float: right;
+    width: 30%;
+  }
+
+
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <div id="box-1" class="box">
+      <h3>Box 1</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Error ut sint quos qui assumenda culpa eum excepturi porro eaque perferendis?
+      </p>
+    </div>
+    <div id="box-2" class="box">
+      <h3>Box 2</h3>
+      <p> <span>Se requiere el uso de box-sizing: border-box; junto de float: left; y float: right; 
+          para las box 2 y box 3</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Error ut sint quos qui assumenda culpa eum excepturi porro eaque perferendis?
+      </p>
+    </div>
+    <div id="box-3" class="box">
+      <h3>Box 3</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Error ut sint quos qui assumenda culpa eum excepturi porro eaque perferendis?
+      </p>
+    </div>
+
+    <div class="clr"></div>
+
+    <div id="box-4" class="box">
+      <h3>Box 4</h3>
+      <p><span>Para que box 4 no se encuentre por debajo de Box 2 y Box 3 se requiere usar
+          un <code>&lt;div class="clr"&gt;&lt;/div&gt;</code> y en el css usar .clr { clear: both; }</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Error ut sint quos qui assumenda culpa eum excepturi porro eaque perferendis?
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em & Rem Units</title>
+
+  <style>
+    #box-1 {
+      font-size: 20px;
+    }
+
+    #box-1 p {
+      font-size: 1.5em;
+       /* Nota: En éste caso padding será 30px que es el valor de p al aplicar
+            font-size: 1.5em
+            Es decir, al aplicar un font-size al elemento las unidades em lo
+            toman como referencia  */
+      padding: 1em;
+    }
+
+    #box-1 ul {
+      font-size: 1.2em;
+    }
+
+    html {
+      Nota: Utilizado de manera común 10px
+      font-size: 10px;
+    }
+
+    #box-2 h3 {
+      font-size: 2rem;
+    }
+
+    #box-2 p {
+      font-size: 1.6rem;
+      line-height: 1.7rem;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="box-1">
+    <h3>Box One. Em examples</h3>
+    <p>Unidades em no crecen al modificar el tamaño de la fuente del navegador</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, 
+      atque tenetur. Beatae quaerat temporibus, sit necessitatibus atque 
+      illum quam repellat.
+    </p>
+
+    <p>En el siguiente ejemplo se utilizan em, y por estar anidados los ul, cada vez crece más 
+      el tamaño de la fuente, debido a que hace un efecto burbuja hacia el parent.
+    </p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>4</li>
+    </ul>
+  </div>
+
+  <div id="box-2">
+    <h3>Box Two. Rem examples</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, 
+      atque tenetur. Beatae quaerat temporibus, sit necessitatibus atque 
+      illum quam repellat.
+    </p>
+  </div>
+</body>
+</html>
