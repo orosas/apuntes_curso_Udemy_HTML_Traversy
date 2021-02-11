@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minmax. CSS Grid</title>
+  <style>
+    body {
+      background: #222;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .item {
+      padding: 3rem;
+      border: 1px solid #ccc;
+      background: #444;
+      color: #f4f4f4;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Uso de auto-fit y minmax() con grid-template-columns</h2>
+  <p>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</p>
+  <p>Resulta en 2 columnas, pero tan cuanto se llega a 300px se van a apilar</p>
+  <p>auto-fit permite colocar tantas celdas en un solo renglon como quepan</p>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+  </div>
+</body>
+
+</html>

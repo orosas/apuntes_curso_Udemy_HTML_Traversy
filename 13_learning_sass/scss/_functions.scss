@@ -1,0 +1,23 @@
+// Set Text Color
+
+// Nota: Que toma un color y regresa dark o light para
+// un background, dependiendo de la luminosidad
+@function set-text-color($color) {
+  @if(lightness($color) > 50) {
+    @return #000;
+  }
+
+  @else {
+    @return #fff;
+  }
+}
+
+
+// Nota: Ejemplo de mixin
+
+// Transform mixin
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Span</title>
+  <style>
+    body {
+      background: #222;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .item {
+      padding: 3rem;
+      border: 1px solid #ccc;
+      background: #444;
+      color: #f4f4f4;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item:first-child {
+      /* grid-column-start: 1;
+      grid-column-end: 4; */
+
+      /* grid-row-start: 1;
+      grid-row-end: 3; */
+
+      /* Nota: shortcut */
+      grid-column: 1 /span 3;
+      grid-row: 1/span 2;
+    }
+
+    .item:nth-child(9) {
+      /* Nota: Líneas equivalentes */
+      /* grid-column: span 3; */
+      grid-column: 2 / span 3;
+
+      /* grid-row: 4 / span 2; */
+      grid-row: 2 /span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Se puede colocar cualquier elemento del grid fuera de su flujo natural</p>
+  <p>En el caso de Item 9 se usa:</p>
+  <pre>
+    .item:nth-child(9) {
+
+      grid-column: 2 / span 3;
+
+      grid-row: 2 /span 2;
+    }
+  </pre>
+  <p>Lo que hace que item 9 "suba" a la segunda línea de rows y columns</p>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+    <div class="item">Item 10</div>
+    <div class="item">Item 11</div>
+    <div class="item">Item 12</div>
+    <div class="item">Item 13</div>
+    <div class="item">Item 14</div>
+    <div class="item">Item 15</div>
+  </div>
+</body>
+
+</html>

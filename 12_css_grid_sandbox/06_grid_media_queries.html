@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Media </title>
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 1rem;
+    }
+
+    .item {
+      border: 1px solid #ccc;
+    }
+
+    @media(max-width:768px) {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+      }
+    }
+
+    @media(max-width:500px) {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="item">
+      <h3>Heading 1</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Ad modi minima, sunt quia excepturi praesentium!
+      </p>
+    </div>
+    <div class="item">
+      <h3>Heading 2</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Ad modi minima, sunt quia excepturi praesentium!
+      </p>
+    </div>
+    <div class="item">
+      <h3>Heading 3</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Ad modi minima, sunt quia excepturi praesentium!
+      </p>
+    </div>
+    <div class="item">
+      <h3>Heading 4</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Ad modi minima, sunt quia excepturi praesentium!
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
